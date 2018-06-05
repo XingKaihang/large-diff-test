@@ -4,6 +4,7 @@ import (
 	"bufio"
 	"bytes"
 	"os"
+	"fmt"
 	"path/filepath"
 	"strings"
 
@@ -157,7 +158,7 @@ func findAttributeFiles(workingDir, gitDir string) []string {
 		}
 		paths = append(paths, filepath.Join(parentDir, info.Name()))
 	})
-
+	// test
 	// reverse the order of the files so more specific entries are found first
 	// when iterating from the front (respects precedence)
 	for i, j := 0, len(paths)-1; i < j; i, j = i+1, j-1 {
